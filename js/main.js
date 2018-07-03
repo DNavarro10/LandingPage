@@ -3,6 +3,5 @@ $(document).ready(function(){
         $('#modal img').attr('src',$(this).attr('data-image-url'));
     });
 
- 
 });
 
