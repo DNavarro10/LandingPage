@@ -7,7 +7,7 @@
   <title>Landing Page</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,700i" rel="stylesheet">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="css/animate.css">
@@ -20,7 +20,7 @@
 <body>
 
   <section id="principal" class="text-center">
-    <img src="img/appPrincipal.png" alt="" srcset="">
+    <img class="img-responsive" src="img/appPrincipal.png" alt="" srcset="">
   </section>
 
   <!-- #/principal -->
@@ -55,7 +55,7 @@
   </section>
   <!-- fin de app -->
 
-  <section id="caracteristicas">
+  <section id="caracteristicas" class="grisBG">
     <h1 class="text-center">Caracteristicas</h1>
     <div class="separador"></div>
     <div class="container">
@@ -125,13 +125,13 @@
 
         </section>
 
-        <section class="col-md-4">
+        <section id="appcentral" class="col-md-4">
           <div class="text-center">
-            <img src="img/appCentral.png" alt="#" srcset="">
+            <img id="appCentral" class="img-responsive" src="img/appCentral.png" alt="#" srcset="">
           </div>
         </section>
 
-        <section class="col-md-4">
+        <section class="col-md-4 text-right">
 
           <div class="caracteristica row">
             <div class="col-md-4">
@@ -202,17 +202,17 @@
 
         <div class="col-sm-4">
           <a href="#modal" data-toggle="modal" data-image-url="img/boletos.png">
-            <img src="img/boletos.png" alt="boletos">
+            <img class="img-responsive" src="img/boletos.png" alt="boletos">
           </a>
         </div>
         <div class="col-sm-4">
           <a href="#modal" data-toggle="modal" data-image-url="img/puntos.png">
-            <img src="img/puntos.png" alt="puntos">
+            <img class="img-responsive" src="img/puntos.png" alt="puntos">
           </a>
         </div>
         <div class="col-sm-4">
           <a href="#modal" data-toggle="modal" data-image-url="img/trailers.png">
-            <img src="img/trailers.png" alt="trailers">
+            <img class="img-responsive" src="img/trailers.png" alt="trailers">
           </a>
         </div>
 
@@ -223,7 +223,7 @@
 
     <div id="modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledy="myModalLabel" aria-hidden=true>
       <div class="modal-body">
-        <img src="#" alt="">
+        <img class="img-responsive" src="#" alt="">
         <button type="button" id="modalclose" data-backdrop="false" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
@@ -241,62 +241,72 @@
     <div class="separador"></div>
 
     <div class="container-fluid">
-      <img src="img/descargarApp.png" alt="">
 
-      <div class="container">
-        <div class="row">
-          <div class="col-md-5 col-md-offset-7">
-            <h2>Elige tu plataforma favorita</h2>
-            <div class="separador"></div>
-
-            <section class="descargas">
-              <div class="cold-md-5">
-                <p>Descarga para
-                  <span>Apple iOS</span>
-                </p>
-              </div>
-              <div class="col-md-5">
-                <p>Descarga para
-                  <span>Apple Android</span>
-                </p>
-              </div>
-            </section>
-          </div>
+      <div class="contenidoDescarga">
+        <div class="phone">
+          <img class="img-responsive" src="img/descargarApp.png" alt="">
         </div>
-        <!--row-->
+        <div class="derechaVacio"></div>
+
+        <div class="container descarga">
+          <div class="row">
+            <div class="col-md-5 col-md-offset-7">
+              <h2 class="text-center">Elige tu plataforma favorita</h2>
+              <div class="separador"></div>
+
+              <section class="plataformas text-center">
+                
+                <div class="col-md-5 col-md-offset-1">
+                  <p>Descarga para
+                    <span>Apple iOS</span>
+                  </p>
+                </div>
+                <div class="col-md-5 col-md-offset-1">
+                  <p>Descarga para
+                    <span>Android</span>
+                  </p>
+                </div>
+              </section>
+            </div>
+          </div>
+          
+          </div>
+          <!--row-->
+        
       </div>
-      <!--container-->
-    </div>
+      <!--container descarga-->
+    </div>  
     <!--container fluid-->
   </section>
+
   <!-- fin de descarga -->
 
-  <section id="soporte">
-    <h2 class="text-center">Soporte</h2>
-    <div class="separador"></div>
+  <section id="soporte" class="azulBG">
+    <h1 id="h1Soporte" class="text-center">Soporte</h1>
+    <div class="separador" id="separaSoporte"></div>
 
-    <h1 class="text-center">Contactános en el siguente formulario</h1>
-
-    <div class="row">
+    <p class="text-center">Contactános en el siguente formulario</p>
+    <div class="container">
+      <div class="row">
 
       <div class="col-md-8 col-md-offset-2">
         <form action="#" class="form-horizontal">
 
           <div class="form-group">
             <div class="col-sm-12">
-              <input type="text" class="form-control" placeholder="Nombre">
+              <input type="text" class="form-control campos" placeholder="Nombre">
             </div>
           </div>
 
           <div class="form-group">
             <div class="col-sm-12">
-              <input type="email" class="form-control" placeholder="E-mail">
+              <input type="email" class="form-control campos" placeholder="E-mail">
             </div>
           </div>
 
           <div class="form-group">
             <div class="col-sm-12">
-              <textarea name="texarea1" class="form-control" placeholder="Mensaje" id="" cols="30" rows="10"></textarea>
+              <textarea name="texarea1" class="form-control campos" placeholder="Mensaje" id="" cols="30" rows="10"></textarea>
             </div>
           </div>
 
@@ -307,7 +317,11 @@
           </div>
         </form>
       </div>
+    
+    
+      </div>
     </div>
+
     <!--row-->
   </section>
   <!-- fin de soporte -->
@@ -328,3 +342,4 @@
 </body>
 
 </html>
+
