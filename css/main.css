@@ -1,6 +1,4 @@
-*{
-  outline: 2px solid red;
-}
+
 body {
   margin: 0;
   padding: 0;
@@ -42,7 +40,42 @@ section .separador {
   margin-bottom: 30px;
   background-color: #182848;
 }
+/* menu navbar*/
+.navbar-default{
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: transparent;
+  border: none;
+  background-image: none;
+  min-height: 90px;
+  padding-top: 20px;
+}
+.nav>li>a{
+  font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 1.5em;
+  text-shadow: 1px 1px 1px black;
+  -webkit-text-shadow: 1px 1px 1px black;
+  
+}
+.nav>li>a:hover,
+.nav>li>a:focus{
+  background-color: hsl(219, 49%, 12%);
+}
 
+/* animaciones navbar*/
+.normal{
+  transition: .6s all ease;
+
+}
+.efecto{
+  transition:1s all ease-out;
+  background-color: #123156;
+  min-height: 35px;
+  box-shadow: 0 0 10px black;
+  padding-top: 0;
+}
 /* principal & app */
 
 section#principal {
@@ -57,6 +90,7 @@ section#principal img{
   margin: 0 auto;
 }
 section#app .social {
+  
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -67,8 +101,16 @@ section#app .social {
   background: linear-gradient(to bottom, #182848, #123156);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   margin: auto;
+  box-shadow: 6px 6px 4px #888888;
+  -webkit-box-shadow: 6px 6px 4px #888888;
+  
 }
+section#app .social, i{
 
+  color:#ffff;
+  font-size:1.6em;
+  line-height: 160px;
+}
 /**  caracteristicas **/
 
 section.grisBG {
@@ -83,13 +125,18 @@ section#caracteristicas p {
 }
 
 section#caracteristicas .caracteristica {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 22px;
   clear: both;
 
 }
+/* iconos */
+
 
 section#caracteristicas .icono {
+  display: flex;
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -102,6 +149,14 @@ section#caracteristicas .icono {
   line-height: 120px;
   vertical-align: middle;
   text-align: center;
+  box-shadow: 6px 6px 4px #888888;
+  -webkit-box-shadow: 6px 6px 4px #888888;
+}
+section#caracteristicas .icono i{
+  font-size: 2.2em;
+  color: #ffffff;
+  margin: auto;
+  
 }
 
 /* PANTALLAS */
@@ -147,6 +202,7 @@ section#descargar .container-fluid{
   position: relative;
   padding: 0;
 }
+
 section#descargar div.phone {
   float: left;
   width: 50%;
@@ -179,13 +235,22 @@ section#descargar .descarga{
 }
 
 section#descargar .plataformas >div{
+ 
   border-radius: 20px;
   border: 3px solid #0c243d;
-  padding: 11px o;
+  padding: 11px 0;
   font-size: 1.2em;
   position: relative;
   padding-left: 50px;
   color: #0c243d;
+}
+/*icono*/
+section#descargar .plataforma , .icono > #icoDescarga{
+  position: absolute;
+  color: #0c243d;
+  font-size: 2.5em;
+  left: 20px;
+  top: 10px;
 }
 
 section#descargar .plataformas >div span{
@@ -241,4 +306,60 @@ section#soporte .btn, .btn-default{
   padding: 5px 43px;
   font-size: 1.4em;
   text-transform: uppercase;
+}
+
+
+/* media */
+
+@media(max-width: 767px){
+  section#principal{
+    height: auto;
+    min-height: initial;
+  }
+  .navbar-default .navbar-collapse{
+    background-color: #123156;
+  }
+  section#caracteristicas .caracteristicas{
+    min-height: 150px;
+    text-align: center;
+  }
+
+  section#descargar .plataformas >div{
+    margin-bottom: 20px;
+    padding: 20px 0;
+  }
+  section#descargar div.contenidoDescarga{
+    height: auto;
+  }
+  section#parallax{
+    background-attachment: scroll;  
+  }
+}
+
+@media(max-width:500px){
+  section#descargar div.phone{
+    width: 100%;
+  }
+  section#caracteristicas >section.col-xs-6{
+    width: 100% !important;
+  }
+
+  section#caracteristicas .caracteristica{
+    min-height: initial;
+    text-align: center;
+  }
+  section#caracteristicas .icono{
+    display: none;
+  }
+  section#descargar div.derechaVacio{
+    display: none;
+  }
+  section#descargar .descarga{
+    position: relative;
+  }
+
+  div.descarga .col-xs-offset-6{
+    width: 100%;
+    margin: 0;
+  }
 }
