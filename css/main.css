@@ -279,13 +279,14 @@ section#soporte .campos{
   background-color: #123156;
   border: 2px solid #ffffff;
   border-radius: 10px;
+  color: #ffffff;
 }
 
 section#soporte form{
   margin-top: 30px;
 }
 
-section#soporte input,{
+section#soporte input{
   min-height: 50px;
   margin-bottom: 20px;
 }
@@ -310,7 +311,14 @@ section#soporte .btn, .btn-default{
 
 
 /* media */
+@media(max-width: 991px){
 
+  #soporte > div.container > div > div {
+    margin: auto;
+    width: 95%;
+    text-align: center;
+  }
+}
 @media(max-width: 767px){
   section#principal{
     height: auto;
